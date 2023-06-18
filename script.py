@@ -7,13 +7,14 @@ def bingLoop() :
     print("Bing - 3 Prompts, 3 Tries")
 
     for prompt in PROMPTS:
-        if not os.path.exists(f"./BING - {prompt}"):
-            os.mkdir(f"BING - {prompt}")
+        if not os.path.exists(f"./BING - {prompt.rstrip()}"):
+            os.mkdir(f"BING - {prompt.rstrip()}")
 
-        os.chdir(f"./BING - {prompt}")
+        os.chdir(f"./BING - {prompt.rstrip()}")
         files_currDir = os.listdir(os.getcwd())
 
         while len(files_currDir) != 3:
+
             try:
                 DRIVER = ai_modules.driver()
                 DRIVER.webdriver.maximize_window()
@@ -30,10 +31,10 @@ def gptLoop() :
     print("ChatGPT - 3 Prompts, 3 Tries")
 
     for prompt in PROMPTS:
-        if not os.path.exists(f"./CHATGPT - {prompt}"):
-            os.mkdir(f"CHATGPT - {prompt}")
+        if not os.path.exists(f"./CHATGPT - {prompt.rstrip()}"):
+            os.mkdir(f"CHATGPT - {prompt.rstrip()}")
 
-        os.chdir(f"./CHATGPT - {prompt}")
+        os.chdir(f"./CHATGPT - {prompt.rstrip()}")
         files_currDir = os.listdir(os.getcwd())
 
         while len(files_currDir) != 3:
