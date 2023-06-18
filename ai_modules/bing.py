@@ -36,9 +36,11 @@ def bing(prompt, count, driver) :
     parent_shadow_content = driver.webdriver.execute_script("return arguments[0].shadowRoot", parent_shadow_root)
     child_shadow_root = parent_shadow_content.find_element(By.CSS_SELECTOR, "#cib-action-bar-main")
     child_shadow_content = driver.webdriver.execute_script("return arguments[0].shadowRoot", child_shadow_root)
+    child_child_shadow_root = child_shadow_content.find_element(By.CSS_SELECTOR, "div > div.main-container.body-2 > div.input-container.as-ghost-placement > cib-text-input")
+    child_child_shadow_content = driver.webdriver.execute_script("return arguments[0].shadowRoot", child_child_shadow_root)
 
     # Inputting prompt
-    input_element = child_shadow_content.find_element(By.ID, "searchbox")
+    input_element = child_child_shadow_content.find_element(By.ID, "searchbox")
     input_element.send_keys(prompt)
     time.sleep(2)
     input_element.send_keys(Keys.RETURN)

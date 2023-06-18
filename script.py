@@ -14,7 +14,6 @@ def bingLoop() :
         files_currDir = os.listdir(os.getcwd())
 
         while len(files_currDir) != 3:
-
             try:
                 DRIVER = ai_modules.driver()
                 DRIVER.webdriver.maximize_window()
