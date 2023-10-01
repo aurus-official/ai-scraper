@@ -5,8 +5,8 @@ from selenium.webdriver.common.by import By
 def chatgpt(prompt, count, driver) :
     # Setting up
     login_url = "https://platform.openai.com/login?launch"
-    username = "aisat.rosales225176@gmail.com"
-    password = "41s4tl1f3"
+    username = ""
+    password = ""
 
     # Logging in
     driver.webdriver.get(login_url)

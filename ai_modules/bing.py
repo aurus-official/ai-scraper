@@ -6,8 +6,8 @@ def bing(prompt, count, driver) :
     # Setting up
     login_url = "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&id=264960&wreply=https%3a%2f%2fwww.bing.com%2fsecure%2fPassport.aspx%3fedge_suppress_profile_switch%3d1%26requrl%3dhttps%253a%252f%252fwww.bing.com%252f%253fwlexpsignin%253d1%26sig%3d261241FBE81160430F7052DEE90561AA&wp=MBI_SSL&lc=1033&CSRFToken=c3599dfc-32e9-4468-8d1a-e7ef967bcb4e&aadredir=1"
     ai_url = "https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx"
-    username = "russelquinto23@gmail.com"
-    password = "june232004"
+    username = ""
+    password = ""
 
     # Logging in
     driver.webdriver.get(login_url)
